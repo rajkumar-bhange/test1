@@ -5,5 +5,8 @@ test('Check Dummy API Status', async () => {
   const response = await apiContext.get('https://jsonplaceholder.typicode.com/posts/1');
   expect(response.status()).toBe(200);
   const body = await response.json();
+
+
+  
   expect(body).toHaveProperty('id', 1);
 });
